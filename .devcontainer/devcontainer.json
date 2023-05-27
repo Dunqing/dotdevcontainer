@@ -1,9 +1,9 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the
 // README at: https://github.com/devcontainers/templates/tree/main/src/typescript-node
 {
-	"name": "Node.js & TypeScript",
+	"name": "Node.js",
 	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
-	"image": "mcr.microsoft.com/devcontainers/typescript-node:0-16-bullseye",
+	"image": "mcr.microsoft.com/devcontainers/typescript-node",
 	"features": {
 		"ghcr.io/devcontainers/features/github-cli:1": {},
 		"ghcr.io/devcontainers/features/node:1": {},
@@ -21,10 +21,8 @@
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	"forwardPorts": [],
 	"runArgs": ["-p=2222:2222"],
-
-	"onCreateCommand": "git config --global user.email dengqing0821@gmail.com && git config --global user.name Dunqing",
 	// Use 'postCreateCommand' to run commands after the container is created.
-	"postCreateCommand": "corepack enable"
+	"postCreateCommand": "sh ./postCreateCommand"
 
 	// Configure tool-specific properties.
 	// "customizations": {},
