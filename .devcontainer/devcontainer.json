@@ -3,7 +3,7 @@
 {
 	"name": "Node.js",
 	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
-	"image": "mcr.microsoft.com/devcontainers/typescript-node",
+	"image": "mcr.microsoft.com/devcontainers/typescript-node:0-20-bullseye",
 	"features": {
 		"ghcr.io/devcontainers/features/github-cli:1": {},
 		"ghcr.io/devcontainers/features/node:1": {},
@@ -11,7 +11,8 @@
 		"ghcr.io/devcontainers-contrib/features/zsh-plugins:0": {},
 		"ghcr.io/guiyomh/features/vim:0": {},
 		"ghcr.io/devcontainers/features/git:1": {},
-		"ghcr.io/devcontainers-contrib/features/homebrew-package:1": {}
+		"ghcr.io/devcontainers-contrib/features/homebrew-package:1": {},
+		"ghcr.io/devcontainers/features/docker-in-docker:2": {}
 	},
 
 	"shutdownAction": "none",
@@ -22,7 +23,7 @@
 	"forwardPorts": [],
 	"runArgs": ["-p=2222:2222"],
 	// Use 'postCreateCommand' to run commands after the container is created.
-	"postCreateCommand": "sh ./postCreateCommand"
+	"postCreateCommand": "corepack enable && git config --global user.email dengqing0821@gmail.com && git config --global user.name Dunqing && gh auth login --with-token < ./ghtoken.txt"
 
 	// Configure tool-specific properties.
 	// "customizations": {},
