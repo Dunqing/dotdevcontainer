@@ -21,7 +21,7 @@
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	"forwardPorts": [],
-	"runArgs": ["-p=2222:2222"],
+	"runArgs": ["-p=2222:2222", "--name=nodejs"],
 	// Use 'postCreateCommand' to run commands after the container is created.
 	"postCreateCommand": "corepack enable && git config --global user.email dengqing0821@gmail.com && git config --global user.name Dunqing && gh auth login --with-token < ./ghtoken.txt"
 
