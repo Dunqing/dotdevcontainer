@@ -5,23 +5,13 @@
 	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
 	"image": "mcr.microsoft.com/devcontainers/typescript-node:0-16-bullseye",
 	"features": {
-		"ghcr.io/devcontainers/features/github-cli:1": {
-			"installDirectlyFromGitHubRelease": true,
-			"version": "latest"
-		},
-		"ghcr.io/devcontainers/features/node:1": {
-			"nodeGypDependencies": true,
-			"version": "lts"
-		},
-		"ghcr.io/devcontainers/features/sshd:1": {
-			"version": "latest"
-		},
-		"ghcr.io/devcontainers-contrib/features/zsh-plugins:0": {
-			"plugins": "ssh-agent npm",
-			"omzPlugins": "https://github.com/zsh-users/zsh-autosuggestions",
-			"username": "root"
-		},
-		"ghcr.io/guiyomh/features/vim:0": {}
+		"ghcr.io/devcontainers/features/github-cli:1": {},
+		"ghcr.io/devcontainers/features/node:1": {},
+		"ghcr.io/devcontainers/features/sshd:1": {},
+		"ghcr.io/devcontainers-contrib/features/zsh-plugins:0": {},
+		"ghcr.io/guiyomh/features/vim:0": {},
+		"ghcr.io/devcontainers/features/git:1": {},
+		"ghcr.io/devcontainers-contrib/features/homebrew-package:1": {}
 	},
 
 	"shutdownAction": "none",
