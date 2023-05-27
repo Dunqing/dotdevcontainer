@@ -20,10 +20,11 @@
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	"forwardPorts": [2222],
-	"runArgs": ["-p=2222:2222"]
+	"runArgs": ["-p=2222:2222"],
 
+	"onCreateCommand": "git config --global user.email dengqing0821@gmail.com && git config --global user.name Dunqing",
 	// Use 'postCreateCommand' to run commands after the container is created.
-	// "postCreateCommand": "yarn install",
+	"postCreateCommand": "corepack enable"
 
 	// Configure tool-specific properties.
 	// "customizations": {},
